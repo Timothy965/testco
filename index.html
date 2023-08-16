@@ -59,12 +59,20 @@
             }
 
                 ul.report-list li img {
-                    width: 100%;
+                    width: 110%; /* Increase the width value to make the images bigger */
                     height: auto;
+                    cursor: pointer; /* Add cursor style to indicate clickability */
                 }
 
         .hover-highlight {
             border: 2px solid red;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1vh; /* Optional: Set the height of the header to the full viewport height */
         }
     </style>
     <script>
@@ -84,14 +92,38 @@
                 });
             });
         });
+
+        // JavaScript for redirecting report cover images to their respective links
+        document.addEventListener("DOMContentLoaded", function () {
+            const reportImages = document.querySelectorAll(".report-list img");
+            reportImages.forEach(function (image, index) {
+                image.addEventListener("click", function () {
+                    const links = [
+                        "https://www.fao-on.org/web/default/files/publications/EBO%20Spring%202022/EBO%20Spring%202022-EN.pdf",
+                        "https://www.fao-on.org/web/default/files/publications/EC2206%20Budget%20Outlook%20Update%20-%20Fall%202022/2022%20Fall%20EBO-EN.pdf",
+                        "https://www.fao-on.org/web/default/files/publications/EBO%20Winter%202023/2023%20Winter%20EBO%20-%20EN.pdf",
+                        "https://www.fao-on.org/web/default/files/publications/EC2301%20Labour%20Market%20Report%202022/2022%20Labour%20Market%20Report-EN.pdf",
+                        "https://www.fao-on.org/web/default/files/publications/2023%20Credit%20Rating/2023%20Credit%20Rating%20Update-EN.pdf"
+                    ];
+                    window.open(links[index], "_blank");
+                });
+            });
+        });
     </script>
 </head>
 <body>
+    <br /><br /><br /><br />
+    <header>
+        <img src="https://www.fao-on.org/web/default/files/public/public/MicrosoftTeams-image%20[Copy%2089888522].png" alt="FAO Header Image">
+    </header><br />
+
     <main>
 
-        <h1>Annual Report 2022-23</br>
+        <h1>
+            Annual Report 2022-23</br>
 
-        Mission and Mandate</h1>
+            Mission and Mandate
+        </h1>
 
         <p>The Financial Accountability Office’s (FAO’s) mission is to support the Legislative Assembly by providing Members of Provincial Parliament (MPPs) and committees of the Assembly with balanced, timely, non-partisan, and authoritative financial and economic analysis.</p>
 
