@@ -1,67 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://fao-on.org/assets/e5bb98125cf18ef4f6d200142ae77543/1a89a293121969b22b1bb92ff977ee62.css">
-  <title>FAO co-op pre-assesment</title>
-  <style>
-    :root {
-      --fao_blue: #0f60d5;
-      --fao_white: #ffffff;
-      --fao_dark_blue: #1a2b4a;
-      --fao_light_blue_1: #9ec2f5;
-      --fao_light_blue_2: #bad1f6;
-      --fao_light_blue_3: #d7e4fa;
-      --fao_light_blue_4: #f1f6fd;
-      --fao_green: #b2d235;
-      --fao_pink: #e23e94;
-    }
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fao-on.org/assets/e5bb98125cf18ef4f6d200142ae77543/1a89a293121969b22b1bb92ff977ee62.css">
+    <title>FAO co-op pre-assessment</title>
+    <style>
+        :root {
+            --fao_blue: #0f60d5;
+            --fao_white: #ffffff;
+            --fao_dark_blue: #1a2b4a;
+            --fao_light_blue_1: #9ec2f5;
+            --fao_light_blue_2: #bad1f6;
+            --fao_light_blue_3: #d7e4fa;
+            --fao_light_blue_4: #f1f6fd;
+            --fao_green: #b2d235;
+            --fao_pink: #e23e94;
+        }
 
-    body{
-      max-width: 800px;
-      margin-inline: auto;
-    }
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--fao_white);
+            font-family: Arial, sans-serif;
+            color: var(--fao_dark_blue);
+            line-height: 1.5;
+        }
 
-    li:has(img){
-      list-style-type: none;
-    }
+        h1, h4 {
+            color: var(--fao_blue);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
 
-  </style>
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: var(--fao_blue);
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        ul.report-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+            ul.report-list li {
+                width: 20%;
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+
+                ul.report-list li img {
+                    width: 100%;
+                    height: auto;
+                }
+
+        .hover-highlight {
+            border: 2px solid red;
+        }
+    </style>
+    <script>
+        // JavaScript for highlighting report cover images
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("a[href^='https://www.fao-on.org']");
+            links.forEach(function (link) {
+                link.addEventListener("mouseover", function () {
+                    const imgSrc = link.getAttribute("href").replace("https://www.fao-on.org", "");
+                    const img = document.querySelector("img[src='" + imgSrc + "']");
+                    img.classList.add("hover-highlight");
+                });
+                link.addEventListener("mouseout", function () {
+                    const imgSrc = link.getAttribute("href").replace("https://www.fao-on.org", "");
+                    const img = document.querySelector("img[src='" + imgSrc + "']");
+                    img.classList.remove("hover-highlight");
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-  <main>
+    <main>
 
-    <h1>Annual Report 2022-23</h1>
+        <h1>Annual Report 2022-23</br>
 
-    <h1>Mission and Mandate</h1>
+        Mission and Mandate</h1>
 
-    <p>The Financial Accountability Office’s (FAO’s) mission is to support the Legislative Assembly by providing Members of Provincial Parliament (MPPs) and committees of the Assembly with balanced, timely, non-partisan and authoritative financial and economic analysis.</p>
+        <p>The Financial Accountability Office’s (FAO’s) mission is to support the Legislative Assembly by providing Members of Provincial Parliament (MPPs) and committees of the Assembly with balanced, timely, non-partisan, and authoritative financial and economic analysis.</p>
 
-    <h4>Ontario’s Economic and Fiscal Performance</h4> 
+        <h4>Ontario’s Economic and Fiscal Performance</h4>
 
-    <p>The FAO provides semi-annual forecasts of Ontario’s economy and financial position through its Economic and Budget Outlook (EBO) reports. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-SP2022">Economic and Budget Outlook, Spring 2022</a> noted that the Province’s robust economic recovery and healthy revenue growth were expected to drive significant fiscal progress. The FAO projected that the Province would balance the budget by 2023-24 and run budget surpluses through 2026-27. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-FA2022">Economic and Budget Outlook, Fall 2022</a> highlighted how Ontario’s strong economy and accelerating inflation drove extraordinary revenue growth in 2021-22, leading to a $2.1 billion budget surplus. While revenue growth was projected to slow over the outlook, the FAO projected that it would continue to outpace program spending increases, leading to growing budget surpluses. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-WI2023">Economic and Budget Outlook, Winter 2023</a> forecasted that the rapid economic recovery from the pandemic was expected to slow sharply in 2023, reflecting the impact of elevated inflation, high interest rates and a weaker global environment. The report identified several risks to the outlook that could result in a slower or faster pace of economic growth.</p> 
-    <p>The FAO also released several reports in 2022-23 examining important economic and fiscal trends in Ontario. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/labour-market-2023">Ontario’s Labour Market in 2022</a> report highlighted that strong post-pandemic job creation continued in 2022, with employment increasing by 338,300 jobs. When combined with the rise in 2021, this marked the strongest two-year period of job gains on record. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/credit-rating-2023">Ontario’s Credit Rating: Winter 2023 Update</a> report found that after dramatic improvements in Ontario’s finances stemming from a post-pandemic surge in economic activity, the four credit rating agencies all reaffirmed their ratings for the Province in updated assessments and maintained their rating outlooks as stable.</p> 
+        <p>The FAO provides semi-annual forecasts of Ontario’s economy and financial position through its Economic and Budget Outlook (EBO) reports. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-SP2022">Economic and Budget Outlook, Spring 2022</a> noted that the Province’s robust economic recovery and healthy revenue growth were expected to drive significant fiscal progress. The FAO projected that the Province would balance the budget by 2023-24 and run budget surpluses through 2026-27. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-FA2022">Economic and Budget Outlook, Fall 2022</a> highlighted how Ontario’s strong economy and accelerating inflation drove extraordinary revenue growth in 2021-22, leading to a $2.1 billion budget surplus. While revenue growth was projected to slow over the outlook, the FAO projected that it would continue to outpace program spending increases, leading to growing budget surpluses. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/EBO-WI2023">Economic and Budget Outlook, Winter 2023</a> forecasted that the rapid economic recovery from the pandemic was expected to slow sharply in 2023, reflecting the impact of elevated inflation, high interest rates, and a weaker global environment. The report identified several risks to the outlook that could result in a slower or faster pace of economic growth.</p>
+        <p>The FAO also released several reports in 2022-23 examining important economic and fiscal trends in Ontario. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/labour-market-2023">Ontario’s Labour Market in 2022</a> report highlighted that strong post-pandemic job creation continued in 2022, with employment increasing by 338,300 jobs. When combined with the rise in 2021, this marked the strongest two-year period of job gains on record. The FAO’s <a href="https://www.fao-on.org/en/Blog/Publications/credit-rating-2023">Ontario’s Credit Rating: Winter 2023 Update</a> report found that after dramatic improvements in Ontario’s finances stemming from a post-pandemic surge in economic activity, the four credit rating agencies all reaffirmed their ratings for the Province in updated assessments and maintained their rating outlooks as stable.</p>
 
-    <ul>
-      <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_1.png"></li>
-      <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_2.png"></li>
-      <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_3.png"></li>
-      <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_4.png"></li>
-      <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_5.png"></li>
-    </ul>
-    
-    <h1>Stakeholders</h1>
+        <ul class="report-list">
+            <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_1.png"></li>
+            <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_2.png"></li>
+            <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_3.png"></li>
+            <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_4.png"></li>
+            <li><img alt="" src="https://fao-on.org/web/default/files/publications/Annual%20Report%202022-23/en/report_5.png"></li>
+        </ul>
 
-    <p>Use of the FAO’s work extends beyond the Legislature to the field of policy analysis where researchers and external organizations increasingly reference FAO data. In 2022-23, a number of publications and organizations cited FAO reports including: </p> 
+        <h1>Stakeholders</h1>
 
-    <ul>
-      <li><a href="https://apps.who.int/iris/bitstream/handle/10665/356893/9789240049666-eng.pdf?sequence=1">World Health Organization</a></li>
-      <li><a href="https://policyalternatives.ca/sites/default/files/uploads/publications/Ontario%20Office/2023/02/Poverty%20in%20the%20Midst%20of%20COVID-19%20-%20Tranjan%20%26%20Robinson.pdf">Canadian Centre for Policy Alternatives</a></li>
-      <li><a href="https://www.fraserinstitute.org/sites/default/files/cost-of-business-subsidies-in-canada.pdf">Fraser Institute</a></li>
-      <li><a href="https://www.oecd-ilibrary.org/content/paper/6fcb2fb4-en">Organisation for Economic Co-operation and Development (OECD)</a></li>
-      <li><a href="https://www.amo.on.ca/sites/default/files/assets/DOCUMENTS/Pre-Budget%20Submissions/2023/AMO%202023%20Provincial%20Pre-Budget%20Submission%202023-02-13%20v2.pdf">Association of Municipalities Ontario (AMO)</a></li>
-    </ul>
+        <p>Use of the FAO’s work extends beyond the Legislature to the field of policy analysis where researchers and external organizations increasingly reference FAO data. In 2022-23, a number of publications and organizations cited FAO reports including: </p>
 
-  </main>
+        <ul>
+            <li><a href="https://apps.who.int/iris/bitstream/handle/10665/356893/9789240049666-eng.pdf?sequence=1" target="_blank">World Health Organization</a></li>
+            <li><a href="https://policyalternatives.ca/sites/default/files/uploads/publications/Ontario%20Office/2023/02/Poverty%20in%20the%20Midst%20of%20COVID-19%20-%20Tranjan%20%26%20Robinson.pdf" target="_blank">Canadian Centre for Policy Alternatives</a></li>
+            <li><a href="https://www.fraserinstitute.org/sites/default/files/cost-of-business-subsidies-in-canada.pdf" target="_blank">Fraser Institute</a></li>
+            <li><a href="https://www.oecd-ilibrary.org/content/paper/6fcb2fb4-en" target="_blank">Organisation for Economic Co-operation and Development (OECD)</a></li>
+            <li><a href="https://www.amo.on.ca/sites/default/files/assets/DOCUMENTS/Pre-Budget%20Submissions/2023/AMO%202023%20Provincial%20Pre-Budget%20Submission%202023-02-13%20v2.pdf" target="_blank">Association of Municipalities Ontario (AMO)</a></li>
+        </ul>
+        <br />
+
+    </main>
 </body>
 </html>
